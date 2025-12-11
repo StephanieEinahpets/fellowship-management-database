@@ -24,6 +24,8 @@ class Hero(db.Model):
     self.health_points = health_points
     self.is_alive = is_alive
 
+  def new_hero_obj():
+    return Hero(hero_name='', race_id=None, age=0, health_points=100, is_alive=True)
 
 class HeroSchema(ma.Schema):
   class Meta:

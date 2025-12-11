@@ -21,6 +21,9 @@ class Realm(db.Model):
     self.realm_name = realm_name
     self.ruler = ruler
 
+  def new_realm_obj():
+    return Realm(realm_name='', ruler='')
+
 class RealmSchema(ma.Schema):
   class Meta:
     fields = ['realm_id', 'realm_name', 'ruler', 'locations']

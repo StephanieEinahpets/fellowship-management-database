@@ -18,6 +18,8 @@ class Ability(db.Model):
     self.ability_name = ability_name
     self.power_level = power_level
 
+  def new_ability_obj():
+    return Ability(hero_id=None, ability_name='', power_level=1)
 
 class AbilitySchema(ma.Schema):
   class Meta:

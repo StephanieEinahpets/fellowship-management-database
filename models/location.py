@@ -20,6 +20,9 @@ class Location(db.Model):
     self.realm_id = realm_id
     self.danger_level = danger_level
 
+  def new_location_obj():
+    return Location(location_name='', realm_id=None, danger_level=1)
+  
 class LocationSchema(ma.Schema):
   class Meta:
     fields = ('location_id', 'realm_id', 'location_name', 'danger_level', 'realm', 'quests')

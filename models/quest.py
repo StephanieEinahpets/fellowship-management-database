@@ -23,6 +23,8 @@ class Quest(db.Model):
     self.reward_gold = reward_gold
     self.is_completed = is_completed
 
+  def new_quest_obj():
+    return Quest(quest_name='', location_id=None, difficulty='Easy', reward_gold=100, is_completed=False)
 
 class QuestSchema(ma.Schema):
   class Meta:

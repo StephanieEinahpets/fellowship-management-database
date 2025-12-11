@@ -19,6 +19,9 @@ class HeroQuest(db.Model):
     self.hero_id = hero_id
     self.quest_id = quest_id
 
+  def new_hero_quest_obj():
+    return HeroQuest(hero_id=None, quest_id=None)
+
 class HeroQuestSchema(ma.Schema):
   class Meta:
     fields = ('hero_id', 'quest_id', 'date_joined')
